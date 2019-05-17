@@ -7,10 +7,10 @@ I'm Xia Zeqing, currently a PhD candidate in the Institute of Computer Science &
 * PhD Candidate in Computer Science (09/2016 - present) <br/>
 School of Electronic Engineering and Computer Science, Peking University
 
-* Bachelor’s Degree in Chemistry (09/2012 - 06/2016) <br/>
+* Bachelor’s Degree in Chemistry (09/2012 - 07/2016) <br/>
 Yuanpei College, Peking University
 
-* Bachelor's Degree in Computer Science(09/2014 - 06/2016) <br/>
+* Bachelor's Degree in Computer Science(09/2014 - 07/2016) <br/>
 School of Electronic Engineering and Computer Science, Peking University
 
 ### Research Interest
@@ -30,7 +30,7 @@ Zeqing Xia, Zhouhui Lian, Yingmin Tang, and Jianguo Xiao. 2018. As-compact-as-po
 
 ### Courses
 
-Spring (2016~now): <a href="http://www.icst.pku.edu.cn/zlian/course/ENT/index.htm">Elementary Number Theory</a>, TA
+Spring (2017~now): <a href="http://www.icst.pku.edu.cn/zlian/course/ENT/index.htm">Elementary Number Theory</a>, as a TA
 
 ### Contact Me
 
