@@ -26,7 +26,7 @@ Currently, I'm working on FontRNN and other character image/skeleton/contour gen
 
 Shuseng Tang, Zeqing Xia, Zhouhui Lian, Yingmin Tang, and Jianguo Xiao. 2019 FontRNN: Generating Large-scale Chinese Fonts via Recurrent Neural Network, submitted to ACMMM 2019
 
-Zeqing Xia, Zhouhui Lian, Yingmin Tang, and Jianguo Xiao. 2018. As-compact-as-possible vectorization for character images. In SIGGRAPH Asia 2018 Technical Briefs (SA '18). ACM, New York, NY, USA, Article 5, 4 pages. DOI: https://doi.org/10.1145/3283254.3283283
+Zeqing Xia, Zhouhui Lian, Yingmin Tang, and Jianguo Xiao. 2018. As-compact-as-possible vectorization for character images. <i>In SIGGRAPH Asia 2018 Technical Briefs (SA '18).</i> ACM, New York, NY, USA, Article 5, 4 pages. DOI: https://doi.org/10.1145/3283254.3283283
 
 ### Courses
 
