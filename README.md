@@ -1,26 +1,29 @@
-## Xia Zeqing's Homepage
+## Xia Zeqing
 
-I'm Xia Zeqing, currently a PhD candidate in the Institute of Computer Science & Technology of Peking University (<a href="www.icst.pku.edu.cn">ICST</a>), also a member of Character Shape Computing Lab (<a href="www.icst.pku.edu.cn/cscl">CSCL</a>).
+PhD candidate 
+Character Shape Computing Lab (<a href="www.icst.pku.edu.cn/cscl">CSCL</a>)
+Institute of Computer Science & Technology (<a href="www.icst.pku.edu.cn">ICST</a>)
+Peking University
 
 ### Experience
 
 * PhD Candidate in Computer Science (09/2016 - present) <br/>
-School of Electronic Engineering and Computer Science, Peking University
+School of Electronic Engineering and Computer Science,<br/>
+Peking University
 
 * Bachelor’s Degree in Chemistry (09/2012 - 07/2016) <br/>
-Yuanpei College, Peking University
+Yuanpei College,<br/>
+Peking University
 
 * Bachelor's Degree in Computer Science(09/2014 - 07/2016) <br/>
-School of Electronic Engineering and Computer Science, Peking University
+School of Electronic Engineering and Computer Science,<br/>
+Peking University
 
 ### Research Interest
-My research interests focus on Computer Vision and Computer Graphics.
-I have done some works which apply deep learning techniques on character shape synthesis, including
+My research interests focus on Computer Vision and Computer Graphics, and I'm currently working on deep learning techniques for character shape synthesis, including
 * Character image generation
 * Character contour simplification
 * Handwritting synthesis
-
-Currently, I'm working on some character image/skeleton/contour generation projects.
 
 ### Publications
 
