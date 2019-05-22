@@ -3,7 +3,7 @@
 PhD candidate <br/>
 Character Shape Computing Lab (<a href="www.icst.pku.edu.cn/cscl">CSCL</a>)<br/>
 Institute of Computer Science & Technology (<a href="www.icst.pku.edu.cn">ICST</a>)<br/>
-Peking University<br/>
+Peking University(<a href="www.pku.edu.cn">PKU</a>)<br/>
 
 ### Experience
 
@@ -27,8 +27,8 @@ My research interests focus on Computer Vision and Computer Graphics, and I'm cu
 
 ### Publications
 
-Zeqing Xia, Zhouhui Lian, Yingmin Tang, and Jianguo Xiao. 2018. As-compact-as-possible vectorization for character images. <i>In SIGGRAPH Asia 2018 Technical Briefs (SA '18).</i> ACM, New York, NY, USA, Article 5, 4 pages. DOI: https://doi.org/10.1145/3283254.3283283
-[<a href="asap/show.pdf">PPT</a>]
+Zeqing Xia, Zhouhui Lian, Yingmin Tang, and Jianguo Xiao. 2018. As-compact-as-possible vectorization for character images. <i>In SIGGRAPH Asia 2018 Technical Briefs (SA '18).</i> ACM, New York, NY, USA, Article 5, 4 pages. DOI: <a href="https://doi.org/10.1145/3283254.3283283">https://doi.org/10.1145/3283254.3283283</a>
+[<a href="asap/show.pdf">PPT</a>][<a href="asap/supp.pdf">Supplymentary Materials</a>]
 
 ### Courses
 
