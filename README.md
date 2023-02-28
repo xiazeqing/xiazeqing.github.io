@@ -32,9 +32,11 @@ Zeqing Xia, Zhouhui Lian, Yingmin Tang, and Jianguo Xiao. 2018. As-compact-as-po
 
 Shusen Tang, Zeqing Xia, Zhouhui Lian, Yingmin Tang, and Jianguo Xiao. 2019. FontRNN: Generating Large-scale Chinese Fonts via Recurrent Neural Network. <i>Computer Graphics Forum.</i> The Eurographics Association and John Wiley & Sons Ltd. 38-Issue 7. DOI: <a href="https://doi.org/10.1111/cgf.13861">https://doi.org/10.1111/cgf.13861 </a> [<a href="FontRNN/">Homepage</a>]
 
+Zeqing Xia, Bojun Xiong, Zhouhui Lian. 2023. VecFontSDF: Learning to Reconstruct and Synthesize High-quality Vector Fonts via Signed Distance Functions. <i>CVPR 2023</i> Accepted.[<a href="VecFontSDF/">Homepage</a>]
+
 ### Courses
 
-Spring (2017~now): <a href="http://www.icst.pku.edu.cn/zlian/course/ENT/index.htm">Elementary Number Theory</a>, as a TA
+Spring (2017~2022), Autumn(2022): <a href="http://www.icst.pku.edu.cn/zlian/course/ENT/index.htm">Elementary Number Theory</a>, as a TA
 
 ### Contact Me
 
