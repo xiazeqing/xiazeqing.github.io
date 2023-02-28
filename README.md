@@ -1,13 +1,13 @@
 ## Xia Zeqing
 
-PhD candidate <br/>
+Ph.D. from<br/>
 Character Shape Computing Lab (<a href="www.icst.pku.edu.cn/cscl">CSCL</a>)<br/>
 Institute of Computer Science & Technology (<a href="www.icst.pku.edu.cn">ICST</a>)<br/>
 Peking University(<a href="www.pku.edu.cn">PKU</a>)<br/>
 
-### Experience
+### Education
 
-* PhD Candidate in Computer Science (09/2016 - present) <br/>
+* PhD Candidate in Computer Science (09/2016 - 01/2023) <br/>
 School of Electronic Engineering and Computer Science,<br/>
 Peking University
 
