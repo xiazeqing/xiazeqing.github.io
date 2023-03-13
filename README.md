@@ -23,6 +23,7 @@ Peking University
 My research interests focus on Computer Vision and Computer Graphics, and I'm currently working on deep learning techniques for character shape synthesis, including
 * Character image generation
 * Character contour simplification
+* Vector glyph generation
 * Handwritting synthesis
 
 ### Publications
