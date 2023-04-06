@@ -87,9 +87,11 @@ img{
 			<div class="plaintext">
 				Font design is of vital importance in the digital content design and modern printing industry. Developing algorithms capable of automatically synthesizing vector fonts can significantly facilitate the font design process. However, existing methods mainly concentrate on raster image generation, and only a few approaches can directly synthesize vector fonts. This paper proposes an end-to-end trainable method, VecFontSDF, to reconstruct and synthesize high-quality vector fonts using signed distance functions (SDFs). Specifically, based on the proposed SDF-based implicit shape representation, VecFontSDF learns to model each glyph as shape primitives enclosed by several parabolic curves, which can be precisely converted to quadratic Bézier curves that are widely used in vector font products. In this manner, most image generation methods can be easily extended to synthesize vector fonts. Qualitative and quantitative experiments conducted on a publicly-available dataset demonstrate that our method obtains high-quality results on several tasks, including vector font reconstruction, interpolation, and few-shot vector font synthesis, markedly outperforming the state of the art.
 			</div>
+			<h2>Method Overview</h2>
+			<img src="./images/method.svg"/>
 			<h2>Download</h2>
 			<div class="plaintext">
-			<li>Paper: <a href="./documents/paper.pdf">PDF</a></li>
+			<li>Paper: <a href="https://arxiv.org/abs/2303.12675">arxiv</a> or <a href="./documents/paper.pdf">PDF</a></li>
 			<li>Supplemental materials: <a href="./documents/supp.pdf">PDF</a></li>
 
 			<!---

@@ -1,9 +1,9 @@
 ## Xia Zeqing
 
 Ph.D. from<br/>
-Character Shape Computing Lab (<a href="www.icst.pku.edu.cn/cscl">CSCL</a>)<br/>
-Institute of Computer Science & Technology (<a href="www.icst.pku.edu.cn">ICST</a>)<br/>
-Peking University(<a href="www.pku.edu.cn">PKU</a>)<br/>
+Character Shape Computing Lab (<a href="http://www.icst.pku.edu.cn/cscl">CSCL</a>)<br/>
+Institute of Computer Science & Technology (<a href="http://www.icst.pku.edu.cn">ICST</a>)<br/>
+Peking University(<a href="http://www.pku.edu.cn">PKU</a>)<br/>
 
 ### Education
 
