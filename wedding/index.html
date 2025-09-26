@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-        <style>
-            body{
-                background-color: #bfb7aa;
-                background-image: url('images/L_K_7985_small.JPG');
-                background-size: cover; 
-                background-position: top;
-                background-repeat: no-repeat;
-            }
-        </style>
-    </head>
-    <body>
-        123
-    </body>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>喜帖</title>
+    <style>
+        @font-face {
+            font-family: ztq-xyjxs;
+            src: url("images/MRKZvePTBdQx.ttf");
+        }
+        body { margin:0; background:#740000; min-height:100vh; }
+        .card { position:relative; width:80vmin; height:80vmin; margin:10vmin auto; }
+        .corner { position:absolute; width:30vmin; height:30vmin; top:2vmin; }
+        .left { left:2vmin; }
+        .right { right:2vmin; transform:scaleX(-1); }
+        .center { position:absolute; top:25%; left:50%; transform:translateX(-50%); width:30vmin; }
+        .text1 { position:absolute; bottom:20%; left:50%; transform:translateX(-50%); color:#D4AF37; font-size:12vmin; font-weight:bold;font-family:ztq-xyjxs, Helvetica, Arial, sans-serif, "Apple Color Emoji"; }
+        .img-container1{
+            left:10%;
+            position: relative;
+            width: 80vmin;
+            height: 80vmin;
+            margin: 10vmin auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="images/huakuang_cropped.webp" class="corner left">
+        <img src="images/huakuang_cropped.webp" class="corner right">
+        <img src="images/xizi.webp" class="center">
+        <div class="text1">喜&nbsp;帖</div>
+    </div>
+    <div class="img-container1">
+        <img src="images/IMG_20250926_234825_1758901735.jpg" style="max-width:80%;height:auto;border:3px solid #D4AF37;">
+    </div>
+</body>
 </html>

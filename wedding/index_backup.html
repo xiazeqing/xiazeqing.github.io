@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <style>
+            body{
+                background-color: #740000;
+            }
+            .crop-container {
+                width: 150px;
+                height: 150px;
+                overflow: hidden;
+                border: none;
+                position:fixed;
+                left: 0px;
+                top:0px;
+            }
+            .crop-image{
+                width: 400px;
+                height: auto;
+            }
+            .fliper{
+                transform: scaleX(-1);
+            }
+            .righttop{
+                width: 150px;
+                height:150px;
+                position:fixed;
+                right: 300px;
+                top:0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="crop-container">
+            <img src="images/huakuang.webp" style="opacity: 1; transform: none; position: relative; z-index: 0; border-radius: 0px;" class="crop-image"/>
+        </div>
+        <div class="righttop">
+            <div class="fliper">
+                <div class="crop-container">
+                    <img src="images/huakuang.webp" style="opacity: 1; transform: none; position: relative; z-index: 0; border-radius: 0px;" class="crop-image"/>
+                </div>
+            </div>
+        </div>
+            <img src="images/xizi.webp" style="opacity: 1; transform: none; width: 181px; height: 181px; display: block;margin-left: auto;margin-right: auto;"/>
+        
+        
+    </body> 
+</html>
