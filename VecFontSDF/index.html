@@ -1,190 +1,376 @@
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style type="text/css">
-div.content{
-	text-align:center;
-	margin:auto;
-	max-width:900px;
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VecFontSDF: Learning to Reconstruct and Synthesize High-quality Vector Fonts via Signed Distance Functions</title>
+    <meta
+      name="description"
+      content="Project page for VecFontSDF: Learning to Reconstruct and Synthesize High-quality Vector Fonts via Signed Distance Functions."
+    />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --surface: #ffffff;
+        --surface-soft: #f7f7f8;
+        --ink: #111111;
+        --muted: #5c5c62;
+        --line: #e5e7eb;
+        --accent: #0f5cc0;
+        --accent-dark: #0a4693;
+        --venue: #c81e1e;
+        --shadow: 0 20px 48px rgba(15, 23, 42, 0.08);
+        --container: 1120px;
+        --narrow: 860px;
+      }
 
-h1{
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
-    line-height:150%;
-    text-align: center;
-    font-size:20pt;
-    font-family:Arial, Serif;
-}
-h2{
-    margin-left: -4px;
-    margin-right: auto;
-    width: 95%;
-    line-height:150%;
-    text-align: justify;
-    font-size:20pt;
-    font-family:Arial, Serif;
-}
+      * {
+        box-sizing: border-box;
+      }
 
-div.authors{
-	font-weight:bold;
-    text-align: center;
-    width: 90%;
-    margin: auto;
-    font-family: Arial, Serif;
-    font-size:12pt;
-}
+      html {
+        scroll-behavior: smooth;
+      }
 
-div.hints1{
-	text-align:center;
-	font-size:8pt;
-}
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+      }
 
-div.icst{
-	text-align:center;
-	font-size:11pt;
-}
+      img {
+        display: block;
+        max-width: 100%;
+      }
 
-div.acc{
-	font-style:italic;
-	text-align:center;
-	font-size:12pt;
-}
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
 
-div.plaintext{
-	text-align: justify;
-}
+      h1,
+      h2,
+      h3,
+      p,
+      pre,
+      figure {
+        margin-top: 0;
+      }
 
-td{
-	text-align:center;
-	font-size:15pt;
-}
+      .container {
+        width: min(calc(100% - 32px), var(--container));
+        margin: 0 auto;
+      }
 
-img{
-	width:100%;
-	margin:auto;
-}
-</style>
-</head>
-<body>
-	<div id="main">
-		<div class="content">
-			<h1>VecFontSDF: Learning to Reconstruct and Synthesize High-quality Vector Fonts via Signed Distance Functions.</h1><br/>
-			<div class="authors">
-				<a href="https://xiazeqing.github.io" style="text-decoration: none">Zeqing Xia</a><sup>1</sup>&nbsp;&nbsp;				
-				<a href="https://xiazeqing.github.io" style="text-decoration: none">Bojun Xiong</a><sup>1</sup>&nbsp;&nbsp;
-				<a href="http://www.icst.pku.edu.cn/zlian/" style="text-decoration: none">Zhouhui Lian<sup>2</sup></a>&nbsp;&nbsp;
-			</div>
-			<div class="hints1"><sup>1</sup>Equal contribution.&nbsp;&nbsp;<sup>2</sup>Corresponding author.</div>
-			<br>
-			<div class="icst"><a href="http://www.wict.pku.edu.cn/english/home/index.htm" style="text-decoration: none">Wangxuan Institute of Computer Technology, Peking University, Beijing, P.R. China<br/>Center For Chinese Font Design and Research, Peking University, Beijing, P.R. China</a></div>
-			<br>
-			<div class="acc"><i>Accepted by CVPR, Jun. 2023.</i></div>
-			<br>
-			<img src="./images/teaser.svg" style="width:60%"/>
-			<h2>Abstract</h2>
-			<div class="plaintext">
-				Font design is of vital importance in the digital content design and modern printing industry. Developing algorithms capable of automatically synthesizing vector fonts can significantly facilitate the font design process. However, existing methods mainly concentrate on raster image generation, and only a few approaches can directly synthesize vector fonts. This paper proposes an end-to-end trainable method, VecFontSDF, to reconstruct and synthesize high-quality vector fonts using signed distance functions (SDFs). Specifically, based on the proposed SDF-based implicit shape representation, VecFontSDF learns to model each glyph as shape primitives enclosed by several parabolic curves, which can be precisely converted to quadratic Bézier curves that are widely used in vector font products. In this manner, most image generation methods can be easily extended to synthesize vector fonts. Qualitative and quantitative experiments conducted on a publicly-available dataset demonstrate that our method obtains high-quality results on several tasks, including vector font reconstruction, interpolation, and few-shot vector font synthesis, markedly outperforming the state of the art.
-			</div>
-			<h2>Method Overview</h2>
-			<img src="./images/method.svg"/>
-			<h2>Download</h2>
-			<div class="plaintext">
-			<li>Paper: <a href="https://arxiv.org/abs/2303.12675">arxiv</a> or <a href="./documents/paper.pdf">PDF</a></li>
-			<li>Supplemental materials: <a href="./documents/supp.pdf">PDF</a></li>
-			<h2>Results</h2>
-			<h3>Reconstruction</h3>
-			<img src="./images/recon.svg"/>
-			<h3>Interpolation</h3>
-			<img src="./images/interpolation.svg"/>
-			<h3>Few-shot Generation</h3>
-			<img src="./images/fewshot.svg"/>
-			<h2>Citation</h2>
-			<br/>
-			<div class="plaintext">
-				@InProceedings{Xia_2023_CVPR,<br/>
-				    author    = {Xia, Zeqing and Xiong, Bojun and Lian, Zhouhui},<br/>
-				    title     = {VecFontSDF: Learning To Reconstruct and Synthesize High-Quality Vector Fonts via Signed Distance Functions},<br/>
-				    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},<br/>
-				    month     = {June},<br/>
-				    year      = {2023},<br/>
-				    pages     = {1848-1857}<br/>
-				}<br/>
-			</div>
-			<!---
-			<img src="./images/figure3.png"/>
-			<h2>Abstract</h2>
-			<div class="plaintext">
-			Despite the recent impressive development of deep neural networks, using deep learning based methods to generate large-scale Chinese fonts is still a rather challenging task due to the huge number of intricate Chinese glyphs, e.g., the official standard Chinese charset GB18030-2000 consists of 27,533 Chinese characters. Until now, most existing models for this task adopt Convolutional Neural Networks (CNNs) to generate bitmap images of Chinese characters due to CNN based models' remarkable success in various applications. However, CNN based models focus more on image-level features while usually ignore stroke order information when writing characters. Instead, we treat Chinese characters as sequences of points (i.e., writing trajectories) and propose to handle this task via an effective Recurrent Neural Network (RNN) model with monotonic attention mechanism, which can learn from as few as hundreds of training samples and then synthesize glyphs for remaining thousands of characters in the same style. Experimental results show that our proposed FontRNN can be used for synthesizing large-scale Chinese fonts as well as generating realistic Chinese handwritings efficiently.
-			</div>
-			<h2>Download</h2>
-			<div class="plaintext">
-			<li>Paper: <a href="./documents/paper.pdf">PDF</a></li>
-			<li>Supplemental materials: <a href="./documents/supp.zip">ZIP</a></li>
-			
-			<li>Code & Dataset: <a href="https://github.com/ShusenTang/FontRNN">Github</a></li>
-			</div>
-			<h2>Experimental Results</h2>
-			<table>
-			<tr> 
-			<td>
-			<br>
-			Generated Skeletons
-			</td>
-			</tr>
-			<tr>
-			<td>
-			<img src="./images/figure7.png"/>
-			</td>
-			</tr>
-			<tr> 
-			<td>
-			<br>
-			Character Synthesis
-			</td>
-			</tr>
-			<tr>
-			<td>
-			<img src="./images/figure8.png"/>
-			</td>
-			</tr>
-			</table>
-			<table>
-			<tr> 
-			<td style="width:50%">
-			<br>
-			Details at the Intersections
-			</td>
-			<td style="width:50%">
-			<br>
-			Comparsion with [ZYZ* 18]
-			</td>
-			</tr>
-			<tr>
-			<td style="width:50%">
-			<img src="./images/figure9.png"/>
-			</td>
-			<td style="width:50%">
-			<img src="./images/figure11.png"/>
-			</td>
-			</table>
-			<h2>Citation</h2>
-			<div class="plaintext">
-			@article{CGF38-7:567-577:2019,<br/>
-			    journal = {Computer Graphics Forum},<br/>
-			    title = {{FontRNN: Generating Large-scale Chinese Fonts via Recurrent Neural Network}},<br/>
-			    author = {Shusen Tang and Zeqing Xia and Zhouhui Lian and Yingmin Tang and Jianguo Xiao},<br/>
-			    pages = {567-577},<br/>
-			    volume= {38},<br/>
-			    number= {7},<br/>
-			    year = {2019},<br/>
-			    note = {\URL{https://diglib.eg.org/bitstream/handle/10.1111/cgf13861/v38i7pp567-577.pdf}},<br/>
-			    DOI = {10.1111/cgf.13861},<br/>
-			}<br/>
-			</div>
-			-->
-			
-		</div>
-	</div>
-</body>
+      .container.narrow {
+        width: min(calc(100% - 32px), var(--narrow));
+      }
+
+      .hero {
+        padding: 56px 0 28px;
+      }
+
+      .hero__inner {
+        text-align: center;
+      }
+
+      h1 {
+        max-width: 1200px;
+        margin: 0 auto 18px;
+        font-size: clamp(1.7rem, 2.7vw, 2.75rem);
+        line-height: 1.12;
+        letter-spacing: -0.03em;
+      }
+
+      .title-line {
+        display: block;
+        white-space: nowrap;
+      }
+
+      .authors {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 16px;
+        margin-bottom: 10px;
+        font-size: 1.05rem;
+      }
+
+      .authors a:hover {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 0.16em;
+      }
+
+      .authors sup {
+        font-size: 0.95em;
+        font-weight: 700;
+        vertical-align: super;
+        line-height: 0;
+      }
+
+      .authors sup.dagger {
+        font-size: 0.74em;
+      }
+
+      .meta sup {
+        font-size: 1em;
+        font-weight: 700;
+        vertical-align: baseline;
+        line-height: inherit;
+      }
+
+      .affiliation,
+      .meta {
+        color: var(--muted);
+      }
+
+      .affiliation {
+        margin-bottom: 4px;
+        font-size: 1.02rem;
+      }
+
+      .meta {
+        margin-bottom: 24px;
+        font-size: 0.95rem;
+      }
+
+      .venue {
+        margin-bottom: 18px;
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--venue);
+      }
+
+      .hero__links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 0 16px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #fff;
+        color: var(--ink);
+        font-size: 0.95rem;
+        font-weight: 600;
+        transition: border-color 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+        border-color: #cbd5e1;
+        box-shadow: 0 10px 18px rgba(15, 23, 42, 0.08);
+      }
+
+      .button--primary {
+        background: #fff;
+        color: var(--ink);
+      }
+
+      .button--primary:hover {
+        background: #fff;
+      }
+
+      .section {
+        padding: 36px 0;
+      }
+
+      .section--teaser {
+        padding-top: 28px;
+      }
+
+      h2 {
+        margin-bottom: 16px;
+        font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+        line-height: 1.15;
+        text-align: center;
+      }
+
+      h3 {
+        margin-bottom: 14px;
+        font-size: 1.15rem;
+        line-height: 1.3;
+        text-align: center;
+      }
+
+      p {
+        margin-bottom: 14px;
+        font-size: 1.03rem;
+        line-height: 1.78;
+        color: #202126;
+      }
+
+      .teaser,
+      .method-figure,
+      .result-figure {
+        margin: 0;
+      }
+
+      .teaser img,
+      .method-figure img,
+      .result-figure img {
+        width: 100%;
+        background: #fff;
+      }
+
+      .teaser img {
+        width: min(100%, 820px);
+        margin: 0 auto;
+      }
+
+      figcaption {
+        max-width: 980px;
+        margin: 14px auto 0;
+        font-size: 0.97rem;
+        line-height: 1.7;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .results-group + .results-group {
+        margin-top: 40px;
+      }
+
+      pre {
+        overflow-x: auto;
+        margin: 20px 0 0;
+        padding: 20px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: #ffffff;
+        color: #111111;
+        font-size: 0.94rem;
+        line-height: 1.7;
+      }
+
+      code {
+        font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+      }
+
+      @media (max-width: 800px) {
+        .hero {
+          padding-top: 40px;
+        }
+
+        .section {
+          padding: 28px 0;
+        }
+
+        h1 {
+          max-width: 100%;
+          font-size: clamp(1.9rem, 9vw, 2.8rem);
+        }
+
+        .title-line {
+          white-space: normal;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container hero__inner">
+        <h1>
+          <span class="title-line">VecFontSDF: Learning to Reconstruct and Synthesize High-quality</span>
+          <span class="title-line">Vector Fonts via Signed Distance Functions</span>
+        </h1>
+        <div class="authors">
+          <a href="https://xiazeqing.github.io" target="_blank" rel="noreferrer">Zeqing Xia<sup>*</sup></a>
+          <a href="https://ymxbj.github.io" target="_blank" rel="noreferrer">Bojun Xiong<sup>*</sup></a>
+          <a href="http://www.icst.pku.edu.cn/zlian/" target="_blank" rel="noreferrer">Zhouhui Lian<sup class="dagger">&dagger;</sup></a>
+        </div>
+        <p class="affiliation">Wangxuan Institute of Computer Technology, Peking University</p>
+        <p class="meta"><sup>*</sup> Equal contribution &nbsp;&nbsp; <sup>&dagger;</sup> Corresponding author</p>
+        <p class="venue">Accepted to CVPR 2023</p>
+        <div class="hero__links">
+          <a class="button button--primary" href="./VecFontSDF.pdf" target="_blank" rel="noreferrer">Paper PDF</a>
+          <a class="button" href="https://arxiv.org/abs/2303.12675" target="_blank" rel="noreferrer">arXiv</a>
+          <a class="button" href="https://github.com/ymxbj/VecFontSDF" target="_blank" rel="noreferrer">Code</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section section--teaser" id="teaser">
+        <div class="container">
+          <figure class="teaser">
+            <img src="./images/teaser.svg" alt="Teaser figure from the VecFontSDF paper." />
+            <figcaption>
+              VecFontSDF reconstructs and synthesizes high-quality vector glyphs through an SDF-based implicit representation that can be converted into quadratic B&eacute;zier curves for editable vector font generation.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="abstract">
+        <div class="container narrow">
+          <h2>Abstract</h2>
+          <p>
+            Font design is of vital importance in digital content design and the modern printing industry. Developing algorithms capable of automatically synthesizing vector fonts can significantly facilitate the font design process. However, existing methods mainly concentrate on raster image generation, and only a few approaches can directly synthesize vector fonts. This paper proposes an end-to-end trainable method, VecFontSDF, to reconstruct and synthesize high-quality vector fonts using signed distance functions (SDFs). Specifically, based on the proposed SDF-based implicit shape representation, VecFontSDF learns to model each glyph as shape primitives enclosed by several parabolic curves, which can be precisely converted to quadratic B&eacute;zier curves that are widely used in vector font products. In this manner, most image generation methods can be easily extended to synthesize vector fonts. Qualitative and quantitative experiments conducted on a publicly available dataset demonstrate that our method obtains high-quality results on several tasks, including vector font reconstruction, interpolation, and few-shot vector font synthesis, markedly outperforming the state of the art.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="method">
+        <div class="container">
+          <h2>Method</h2>
+          <figure class="method-figure">
+            <img src="./images/method.svg" alt="Overview of the VecFontSDF framework." />
+            <figcaption>
+              Overview of VecFontSDF. The method represents glyph shapes with SDF-based implicit primitives and converts them into quadratic B&eacute;zier curves, enabling high-quality reconstruction and synthesis of vector fonts.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="results">
+        <div class="container">
+          <div class="results-group">
+            <h2>Results</h2>
+            <h3>Reconstruction</h3>
+            <figure class="result-figure">
+              <img src="./images/recon.svg" alt="Vector font reconstruction results." />
+            </figure>
+          </div>
+
+          <div class="results-group">
+            <h3>Interpolation</h3>
+            <figure class="result-figure">
+              <img src="./images/interpolation.svg" alt="Vector font interpolation results." />
+            </figure>
+          </div>
+
+          <div class="results-group">
+            <h3>Few-shot Generation</h3>
+            <figure class="result-figure">
+              <img src="./images/fewshot.svg" alt="Few-shot vector font generation results." />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="bibtex">
+        <div class="container narrow">
+          <h2>BibTeX</h2>
+          <pre><code>@InProceedings{Xia_2023_CVPR,
+  author    = {Xia, Zeqing and Xiong, Bojun and Lian, Zhouhui},
+  title     = {VecFontSDF: Learning To Reconstruct and Synthesize High-Quality Vector Fonts via Signed Distance Functions},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  month     = {June},
+  year      = {2023},
+  pages     = {1848-1857}
+}</code></pre>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
